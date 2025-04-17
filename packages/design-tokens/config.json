@@ -1,0 +1,49 @@
+{
+  "source": ["src/**/*.json"],
+  "platforms": {
+    "web": {
+      "transformGroup": "web",
+      "buildPath": "dist/web/",
+      "files": [
+        {
+          "destination": "tokens.css",
+          "format": "css/variables"
+        },
+        {
+          "destination": "tokens.js",
+          "format": "javascript/es6"
+        }
+      ]
+    },
+    "ios": {
+      "transformGroup": "ios",
+      "buildPath": "dist/ios/",
+      "files": [
+        {
+          "destination": "tokens.swift",
+          "format": "ios/swift/enum.swift"
+        }
+      ]
+    },
+    "android": {
+      "transformGroup": "android",
+      "buildPath": "dist/android/",
+      "files": [
+        {
+          "destination": "tokens.xml",
+          "format": "android/resources"
+        }
+      ]
+    },
+    "reactNative": {
+      "transformGroup": "js",
+      "buildPath": "dist/react-native/",
+      "files": [
+        {
+          "destination": "tokens.js",
+          "format": "javascript/es6"
+        }
+      ]
+    }
+  }
+} 

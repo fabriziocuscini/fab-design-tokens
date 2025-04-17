@@ -4,15 +4,25 @@
   "exports": {
     "./counter": "./components/counter.ts",
     "./header": "./components/header.ts",
-    "./setup-counter": "./utils/counter.ts"
+    "./setup-counter": "./utils/counter.ts",
+    "./button": "./components/button.tsx"
   },
   "license": "MIT",
   "scripts": {
     "lint": "eslint \"**/*.ts\""
   },
+  "dependencies": {
+    "@repo/design-tokens": "*",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "react": "^18.2.0",
+    "tailwind-merge": "^2.2.0"
+  },
   "devDependencies": {
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
     "eslint": "^8.57.0",
     "typescript": "5.5.4"
   }

@@ -1,17 +1,25 @@
 {
+  "name": "fab-design-tokens",
   "private": true,
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "tokens:build": "turbo run build --filter=@repo/design-tokens",
+    "web:dev": "turbo run dev --filter=web",
+    "web:build": "turbo run build --filter=web",
+    "mobile:start": "turbo run start --filter=mobile",
+    "mobile:ios": "turbo run ios --filter=mobile",
+    "mobile:android": "turbo run android --filter=mobile",
+    "docs:dev": "turbo run dev --filter=docs",
+    "storybook": "turbo run storybook --filter=web"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
     "prettier": "^3.2.5",
     "turbo": "^2.5.0"
   },
-  "name": "with-vite",
   "packageManager": "npm@10.9.2",
   "workspaces": [
     "apps/*",

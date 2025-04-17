@@ -1,0 +1,22 @@
+{
+  "name": "@repo/design-tokens",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "style-dictionary build",
+    "clean": "rm -rf dist",
+    "lint": "eslint \"**/*.ts*\""
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "eslint": "^8.57.0",
+    "style-dictionary": "^3.9.1",
+    "typescript": "5.5.4"
+  }
+} 
