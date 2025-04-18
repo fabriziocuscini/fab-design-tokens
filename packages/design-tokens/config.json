@@ -20,8 +20,8 @@
       "buildPath": "dist/ios/",
       "files": [
         {
-          "destination": "tokens.swift",
-          "format": "ios/swift/enum.swift"
+          "destination": "tokens.h",
+          "format": "ios/macros"
         }
       ]
     },

@@ -1,7 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { Button } from 'react-native-reusables';
 
 export default function App() {
   return (
@@ -11,20 +10,19 @@ export default function App() {
         <Text style={styles.subtitle}>React Native Mobile App</Text>
         
         <View style={styles.buttonContainer}>
-          <Button 
-            title="Primary Button" 
-            variant="filled" 
-            color="#3B82F6" 
+          <TouchableOpacity 
+            style={[styles.button, styles.primaryButton]} 
             onPress={() => alert('Primary button pressed!')} 
-          />
+          >
+            <Text style={styles.buttonText}>Primary Button</Text>
+          </TouchableOpacity>
           
-          <Button 
-            title="Secondary Button" 
-            variant="outlined" 
-            color="#10B981" 
+          <TouchableOpacity 
+            style={[styles.button, styles.secondaryButton]} 
             onPress={() => alert('Secondary button pressed!')} 
-            style={styles.secondaryButton}
-          />
+          >
+            <Text style={styles.buttonText}>Secondary Button</Text>
+          </TouchableOpacity>
         </View>
       </View>
       <StatusBar style="auto" />
@@ -56,7 +54,20 @@ const styles = StyleSheet.create({
   buttonContainer: {
     width: '100%',
   },
+  button: {
+    padding: 16,
+    borderRadius: 8,
+    alignItems: 'center',
+    marginBottom: 16,
+  },
+  primaryButton: {
+    backgroundColor: '#3B82F6',
+  },
   secondaryButton: {
-    marginTop: 16,
+    backgroundColor: '#10B981',
+  },
+  buttonText: {
+    color: '#fff',
+    fontWeight: 'bold',
   },
 }); 

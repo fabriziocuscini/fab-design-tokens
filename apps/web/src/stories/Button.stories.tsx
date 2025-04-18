@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from "@repo/ui/button";
 
 const meta = {
-  title: 'UI/Button',
+  title: 'Components/Button',
   component: Button,
   parameters: {
     layout: 'centered',
@@ -12,10 +12,20 @@ const meta = {
     variant: {
       control: 'select',
       options: ['default', 'destructive', 'outline', 'secondary', 'ghost', 'link'],
+      description: 'The visual style of the button',
     },
     size: {
       control: 'select',
       options: ['default', 'sm', 'lg', 'icon'],
+      description: 'The size of the button',
+    },
+    className: {
+      control: 'text',
+      description: 'Additional CSS classes to apply',
+    },
+    children: {
+      control: 'text',
+      description: 'The content to display inside the button',
     },
   },
 } satisfies Meta<typeof Button>;
@@ -26,6 +36,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     children: 'Button',
+    variant: 'default',
   },
 };
 
